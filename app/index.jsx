@@ -4,6 +4,8 @@ import {useEffect, useState} from "react";
 import {router} from "expo-router";
 import asyncStorage from "@react-native-async-storage/async-storage/src/AsyncStorage";
 
+
+
 export default function Index() {
     const [progress, setProgress] = useState(0);
 
@@ -45,6 +47,7 @@ export default function Index() {
               <View style={{ width: `${progress}%` }} className="h-full border-l-emerald-300 rounded-full"></View>
           </View>
           <StatusBar style="auto" />
+
 
 
       </View>

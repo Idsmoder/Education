@@ -47,7 +47,8 @@ api.interceptors.response.use(
             return Promise.reject(error);
         }
         if (error.response.status === 401) {
-            return Promise.reject(error);
+            asyncStorage.removeItem("access_token");
+            router.push("/login");
         } else {
             return Promise.reject(error);
         }

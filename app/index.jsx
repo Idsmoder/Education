@@ -11,7 +11,6 @@ export default function Index() {
 
     const [token,setToken] = useState( asyncStorage.getItem('access_token') || null);
 
-    console.log(token,"token")
     useEffect(() => {
         const interval = setInterval( ()=> {
             setProgress((oldProgress) => {

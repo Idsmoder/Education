@@ -18,7 +18,6 @@ api.interceptors.request.use(
             "Content-Type": "application/json",
             ...config.headers,
         };
-
         return config;
 
     },
@@ -33,6 +32,7 @@ api.interceptors.response.use(
         return response;
     },
     function (error) {
+        console.log(error);
         if (!error.response) {
             error["response"] = {
                 data: {

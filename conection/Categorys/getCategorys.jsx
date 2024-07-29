@@ -1,7 +1,8 @@
 import {api} from "../../api/axios";
 
-export default function getCategorysRequest(){
-    return api.get('select/category')
+export  function getCategorysRequest(){
+    api.get('select/category')
+
         .then((response) => {
             return response.data;
         })

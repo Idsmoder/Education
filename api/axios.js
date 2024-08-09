@@ -32,22 +32,8 @@ api.interceptors.response.use(
         return response;
     },
     function (error) {
-        console.log(error);
-        if (!error.response) {
-            error["response"] = {
-                data: {
-                    errors: [
-                        {
-                            message:
-                                "Проверьте подключение к Интернету или Сервер не отвечает",
-                        },
-                    ],
-                },
-            };
-            return Promise.reject(error);
-        }
+        
         if (error.response.status === 401) {
-            asyncStorage.removeItem("access_token");
             router.push("/login");
         } else {
             return Promise.reject(error);

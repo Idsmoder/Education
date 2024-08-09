@@ -27,14 +27,15 @@ export default function Index() {
     }, []);
     useEffect(() => {
         if (progress === 100) {
-            if (token) {
-                router.push('home');
-            } else {
+            if (!token) {
                 router.push('login');
+            }else{
+                router.push('home');
             }
         }
 
     }, [progress,token, router]);
+   
   return (
       <View className="flex-1 justify-center items-center bg-emerald-500">
           <Text className="mt-64 text-3xl text-white font-bold">iMEDIC</Text>

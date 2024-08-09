@@ -1,6 +1,6 @@
-import { Stack } from "expo-router"
-
+import { Stack} from "expo-router"
 const HomeLayout = () =>{
+    
     return (
         <Stack>
             <Stack.Screen
@@ -13,7 +13,19 @@ const HomeLayout = () =>{
             <Stack.Screen
                 name="[id]"
                 options={{
-                    headerBackTitle:''
+                    title: 'test',
+                    headerStyle: {
+                        backgroundColor: "#fff",
+                        
+                    },
+                    headerTintColor: "black",
+                    headerTitleStyle: {
+                        fontWeight: "bold",
+                    },
+                    headerBackTitle: "Back",
+                    headerBackTitleVisible: false,
+                    
+                    
                 }}
             />
         </Stack>
